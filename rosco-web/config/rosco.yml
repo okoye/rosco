@@ -53,6 +53,7 @@ defaultCloudProviderType: aws
 
 templatesNeedingRoot: aws-chroot.json
 
+//TODO: if spinnaker region specified use that otherwise check in config else assume passed region the same
 aws:
   enabled: ${AWS_ENABLED:false}
   bakeryDefaults:
