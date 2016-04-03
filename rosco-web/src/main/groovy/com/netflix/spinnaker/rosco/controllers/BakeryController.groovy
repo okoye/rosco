@@ -92,6 +92,7 @@ class BakeryController {
       bakeRequest = bakeRequest.copyWith(cloud_provider_type: defaultCloudProviderType)
     }
 
+    //TODO chuka: region should denote where AMIs should exist not where it is baked as that is fixed.
     CloudProviderBakeHandler cloudProviderBakeHandler = cloudProviderBakeHandlerRegistry.lookup(bakeRequest.cloud_provider_type)
 
     if (cloudProviderBakeHandler) {
@@ -108,6 +109,7 @@ class BakeryController {
         }
       }
 
+      //NOTE: region denotes where AMI should be copied to.
       def packerCommand = cloudProviderBakeHandler.producePackerCommand(region, bakeRequest)
       def scriptRequest = baseScriptRequest.copyWith(tokenizedCommand: packerCommand)
 

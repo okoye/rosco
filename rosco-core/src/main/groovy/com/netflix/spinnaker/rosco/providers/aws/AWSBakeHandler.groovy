@@ -90,7 +90,7 @@ public class AWSBakeHandler extends CloudProviderBakeHandler {
   @Override
   Map buildParameterMap(String region, def awsVirtualizationSettings, String imageName, BakeRequest bakeRequest) {
     def parameterMap = [
-      aws_region       : region,
+      aws_region       : region, //TODO Chuka: change me
       aws_ssh_username : awsVirtualizationSettings.sshUserName,
       aws_instance_type: awsVirtualizationSettings.instanceType,
       aws_source_ami   : awsVirtualizationSettings.sourceAmi,
