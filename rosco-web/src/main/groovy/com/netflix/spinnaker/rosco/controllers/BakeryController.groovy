@@ -92,6 +92,7 @@ class BakeryController {
       bakeRequest = bakeRequest.copyWith(cloud_provider_type: defaultCloudProviderType)
     }
 
+    //TODO chuka: region should denote where AMIs should exist not where it is baked as that is fixed.
     CloudProviderBakeHandler cloudProviderBakeHandler = cloudProviderBakeHandlerRegistry.lookup(bakeRequest.cloud_provider_type)
 
     if (cloudProviderBakeHandler) {
