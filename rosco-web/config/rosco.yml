@@ -60,6 +60,7 @@ aws:
     awsAssociatePublicIpAddress: true
     templateFile: aws-ebs.json
     defaultVirtualizationType: hvm
+    bakeRegion: us-west-2
     baseImages:
     # TODO(duftler): Identify proper base amis.
     # TODO(duftler): Support additional store types beyond ebs.
