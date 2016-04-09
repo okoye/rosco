@@ -18,8 +18,7 @@ import org.springframework.web.bind.annotation.*
 @Slf4j
 class DistributedBakeryController extends BakeryController{
 
-    @Autowired
-    RoscoSlaveService roscoSlaveService
+    @Autowired RoscoSlaveService roscoSlaveService
 
 
     @Override
